@@ -1,0 +1,56 @@
+body {
+    background-color: #FAF3F3;
+    color: #333;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
+  .time-display {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 10px 15px;
+    background-color: #fff;
+  }
+  
+  .custom-picker {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 5px 15px;
+    background-color: #fff;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  
+  .btn-ios {
+    border-radius: 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+  }
+  
+  .timeline-container {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+  }
+  
+  .timeline-slot {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .wake-time {
+    background-color: #E8F4FD;
+    color: #333;
+    border: 1px solid #BBD1EA;
+  }
+  
+  .nap-time {
+    background-color: #FDE8EC;
+    color: #333;
+    border: 1px solid #FABBC4;
+  }
+  

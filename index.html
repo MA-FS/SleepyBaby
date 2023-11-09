@@ -4,86 +4,60 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Baby Nap Scheduler</title>
-<!-- Bootstrap CSS -->
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-<!-- Custom CSS for overriding default Bootstrap styles -->
-<style>
-  body {
-    background-color: #FAF3F3; /* soft pink background */
-    color: #333; /* grey text for better readability */
-    font-family: 'Helvetica Neue', sans-serif; /* closest web-safe font to San Francisco */
-  }
-  .rounded-icon {
-    border-radius: 50%;
-    padding: 10px;
-  }
-  .btn-ios {
-    border-radius: 15px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-  }
-  .icon-sun {
-    content: url('sun-icon-url'); /* replace with the actual URL of the sun icon */
-  }
-  .icon-moon {
-    content: url('moon-icon-url'); /* replace with the actual URL of the moon icon */
-  }
-  .custom-picker {
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    padding: 5px 15px;
-    background-color: #fff;
-  }
-  /* Additional styling as needed... */
-</style>
+<link href="styles.css" rel="stylesheet">
 </head>
 <body>
 <div class="container">
-  <!-- Home Screen -->
-  <div class="row my-4">
-    <div class="col">
-      <h1 class="text-center">Today's Nap Schedule</h1>
-      <!-- Summary of today's nap schedule -->
+  <div class="row my-4 align-items-center">
+    <div class="col-8">
+      <h1>Today's Nap Schedule</h1>
+    </div>
+    <div class="col-4">
+      <span class="time-display" id="currentTime"></span>
     </div>
   </div>
 
-  <!-- Age Selection -->
   <div class="row my-4">
-    <div class="col">
-      <label for="ageSelection">Select Baby's Age:</label>
+    <div class="col-md-6">
+      <label for="ageSelection">Baby's Age in Months:</label>
       <select class="custom-select custom-picker" id="ageSelection">
-        <!-- Options for age -->
+        <option value="0-3">Up to 3 Months</option>
+        <option value="4">4 Months</option>
+        <option value="5">5 Months</option>
+        <option value="6">6 Months</option>
+        <option value="7">7 Months</option>
+        <option value="8">8 Months</option>
+        <option value="9">9 Months</option>
+        <option value="10">10 Months</option>
+        <option value="11">11 Months</option>
+        <option value="12-18">12 to 18 Months</option>
       </select>
     </div>
-  </div>
-
-  <!-- Wake Up Time Picker -->
-  <div class="row my-4">
-    <div class="col">
+    <div class="col-md-6">
       <label for="wakeTimePicker">Wake Up Time:</label>
       <input type="time" id="wakeTimePicker" class="form-control custom-picker">
     </div>
   </div>
 
-  <!-- Schedule Overview -->
   <div class="row my-4">
-    <div class="col">
-      <h2 class="text-center">Nap Times & Wake Windows</h2>
-      <!-- Visual timeline or list of suggested nap times and wake windows -->
+    <div class="col text-center">
+      <button id="calculateSchedule" class="btn btn-ios">Calculate Wake Windows</button>
     </div>
   </div>
 
-  <!-- Notifications -->
-  <div class="row my-4">
-    <div class="col text-center">
-      <button class="btn btn-ios">Set Reminder for Next Nap</button>
-    </div>
+  <div id="napSchedule" class="my-4">
+    <!-- Nap schedule will be displayed here -->
+  </div>
+
+  <div class="timeline-container" id="dailyTimeline">
+    <!-- Timeline will be displayed here -->
   </div>
 </div>
 
-<!-- Bootstrap JS, Popper.js, and jQuery -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="scheduler.js"></script>
 </body>
 </html>
