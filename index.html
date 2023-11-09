@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baby Nap Scheduler</title>
+<!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Custom CSS for overriding default Bootstrap styles -->
+<style>
+  body {
+    background-color: #FAF3F3; /* soft pink background */
+    color: #333; /* grey text for better readability */
+    font-family: 'Helvetica Neue', sans-serif; /* closest web-safe font to San Francisco */
+  }
+  .rounded-icon {
+    border-radius: 50%;
+    padding: 10px;
+  }
+  .btn-ios {
+    border-radius: 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+  }
+  .icon-sun {
+    content: url('sun-icon-url'); /* replace with the actual URL of the sun icon */
+  }
+  .icon-moon {
+    content: url('moon-icon-url'); /* replace with the actual URL of the moon icon */
+  }
+  .custom-picker {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 5px 15px;
+    background-color: #fff;
+  }
+  /* Additional styling as needed... */
+</style>
+</head>
+<body>
+<div class="container">
+  <!-- Home Screen -->
+  <div class="row my-4">
+    <div class="col">
+      <h1 class="text-center">Today's Nap Schedule</h1>
+      <!-- Summary of today's nap schedule -->
+    </div>
+  </div>
+
+  <!-- Age Selection -->
+  <div class="row my-4">
+    <div class="col">
+      <label for="ageSelection">Select Baby's Age:</label>
+      <select class="custom-select custom-picker" id="ageSelection">
+        <!-- Options for age -->
+      </select>
+    </div>
+  </div>
+
+  <!-- Wake Up Time Picker -->
+  <div class="row my-4">
+    <div class="col">
+      <label for="wakeTimePicker">Wake Up Time:</label>
+      <input type="time" id="wakeTimePicker" class="form-control custom-picker">
+    </div>
+  </div>
+
+  <!-- Schedule Overview -->
+  <div class="row my-4">
+    <div class="col">
+      <h2 class="text-center">Nap Times & Wake Windows</h2>
+      <!-- Visual timeline or list of suggested nap times and wake windows -->
+    </div>
+  </div>
+
+  <!-- Notifications -->
+  <div class="row my-4">
+    <div class="col text-center">
+      <button class="btn btn-ios">Set Reminder for Next Nap</button>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
